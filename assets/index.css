@@ -57,7 +57,7 @@ header{
 }
 
 .navbar{
-    gap: 2rem
+    gap: 1rem
 }
 
 .navbar-list{
@@ -81,7 +81,13 @@ header{
     color: var(--text-white)
 }
 
+/* Ocultamos el input: checkbox */
+.menu-label,
+#menu-toggle,
 #cart-toggle{
+    display: none;
+}
+.cart::-webkit-scrollbar{
     display: none;
 }
 
