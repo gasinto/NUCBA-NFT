@@ -34,6 +34,7 @@
 
 body{
     background-color: var();
+    
 }
 
 /*HEADER*/
@@ -47,6 +48,8 @@ header{
     height: 65px;
     position: fixed;
     width: 100%;
+    max-width: 100vw;
+    /* overflow-x: hidden; */
 }
 
 .navbar, 
@@ -57,7 +60,8 @@ header{
 }
 
 .navbar{
-    gap: 1rem
+    gap: 1rem;
+    
 }
 
 .navbar-list{
@@ -80,6 +84,7 @@ header{
     font-weight: 600;
     color: var(--text-white)
 }
+
 
 /* Ocultamos el input: checkbox */
 .menu-label,
@@ -110,7 +115,10 @@ header{
     flex-direction: column;
     gap: 30px;
     overflow-y: scroll;
-    display: none;
+    display: flex;
+    translate: 100%;
+    transition: all .5s ease-out;
+    z-index: 2;
 }
 
 .cart h2{
@@ -202,7 +210,8 @@ header{
 
 /* aca hacemos funcional el carrito */
 #cart-toggle:checked + .cart{
-    display: flex;
+    /* display: flex; */
+    translate: 0;
 }
 
 
@@ -240,7 +249,6 @@ main{
     font-size: 48px;
     font-weight: 800;
     width: 80%;
-    min-width: 460px;
     /* con esto damos gradiente al texto*/
     background: linear-gradient(to top, #30cfd0, #c43ad6);
     color: transparent;
@@ -568,6 +576,7 @@ footer{
     align-items: center;
     gap: 40px;
     padding: 60px 0;
+    width: 100%;
 }
 
 footer a,

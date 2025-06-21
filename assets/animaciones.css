@@ -1,0 +1,34 @@
+/* hacemos smooth el scroll con vinculo ancla*/
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+
+/* Vamos hacer el overlay con el efecto de glassmorphismo */
+.overlay{
+    /* background-color: red; */
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top:65px;
+    left: 0;
+    z-index: 1;
+
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+
+    /* display: none; */
+    opacity: 0;
+    transition: all .5s ease
+}
+
+#menu-toggle:checked ~ .overlay,
+#cart-toggle:checked ~ .overlay{
+    /* display: flex; */
+    opacity: 1;
+}
