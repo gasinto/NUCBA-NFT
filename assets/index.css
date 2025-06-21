@@ -50,6 +50,7 @@ header{
     width: 100%;
     max-width: 100vw;
     /* overflow-x: hidden; */
+    z-index: 1000;
 }
 
 .navbar, 
@@ -118,7 +119,7 @@ header{
     display: flex;
     translate: 100%;
     transition: all .5s ease-out;
-    z-index: 2;
+    z-index: 1001;
 }
 
 .cart h2{
